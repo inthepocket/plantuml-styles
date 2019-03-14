@@ -1,39 +1,47 @@
 @startuml
 
+!define DEFAULT_BGCOLOR #9cc3da
 !define ITP_DARK_BLUE #322960
 
+skinparam defaultFontColor Black
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 12
+skinParam defaultFontStyle plain
+
+' values: otho, polyline, splines (default)
+skinparam linetype ortho
+
 skinparam class {
-  BackgroundColor #9cc3da
+  BackgroundColor DEFAULT_BGCOLOR
   BorderColor ITP_DARK_BLUE
   'FontColor #ffffff
   'FontName Flama Semicondensed
   'FontSize 16
-  'FontWeight bold
+  FontStyle bold
 }
 
 skinparam component {
   ArrowFontName Flama Semicondensed
   ArrowColor ITP_DARK_BLUE
   ArrowFontColor ITP_DARK_BLUE
-  BackgroundColor #9cc3da
+  BackgroundColor DEFAULT_BGCOLOR
   BorderColor ITP_DARK_BLUE
   'FontColor #ffffff
   'FontName Flama Semicondensed
   'FontSize 10
-  'FontWeight bold
+  ' style: plain, bold, italic
+  'FontStyle bold
   Style uml2  
 }
 
 skinparam database {
+  BackgroundColor DEFAULT_BGCOLOR
   
 }
 
-skinparam linetype ortho
-
 skinparam node {
-
+  BackgroundColor DEFAULT_BGCOLOR
 }
-
 
 
 @enduml
