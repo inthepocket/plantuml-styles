@@ -3,10 +3,10 @@
 skinparam class {
   BackgroundColor #9cc3da
   BorderColor #302a5d
-  FontColor #ffffff
-  FontName Flama Semicondensed
-  FontSize 10
-  FontWeight bold
+  'FontColor #ffffff
+  'FontName Flama Semicondensed
+  'FontSize 16
+  'FontWeight bold
 }
 
 skinparam component {
@@ -15,14 +15,23 @@ skinparam component {
   ArrowFontColor #777777
   BackgroundColor #9cc3da
   BorderColor #302a5d
-  FontColor #ffffff
-  FontName Flama Semicondensed
-  FontSize 10
-  FontWeight bold
+  'FontColor #ffffff
+  'FontName Flama Semicondensed
+  'FontSize 10
+  'FontWeight bold
   Style uml2  
 }
 
+skinparam database {
+  
+}
+
 skinparam linetype ortho
+
+skinparam node {
+
+}
+
 
 
 @enduml
