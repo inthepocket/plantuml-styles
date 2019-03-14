@@ -10,9 +10,9 @@ skinparam class {
 }
 
 skinparam component {
-  #ArrowFontName Flama Semicondensed
+  ArrowFontName Flama Semicondensed
   ArrowColor #302a5d
-  #ArrowFontColor #777777
+  ArrowFontColor #777777
   BackgroundColor #9cc3da
   BorderColor #302a5d
   FontColor #ffffff
