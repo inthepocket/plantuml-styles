@@ -1,0 +1,16 @@
+@startuml
+
+skinparam linetype ortho
+
+skinparam component {
+  FontName Flama Semicondensed
+  FontColor #ffffff
+  FontWeight bold
+  BorderColor #302a5d
+  BackgroundColor #9cc3da
+  ArrowFontName Flama Semicondensed
+  ArrowColor #302a5d
+  ArrowFontColor #777777
+}
+
+@enduml
