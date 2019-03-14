@@ -1,8 +1,10 @@
 @startuml
 
+!define ITP_DARK_BLUE #322960
+
 skinparam class {
   BackgroundColor #9cc3da
-  BorderColor #302a5d
+  BorderColor ITP_DARK_BLUE
   'FontColor #ffffff
   'FontName Flama Semicondensed
   'FontSize 16
@@ -11,10 +13,10 @@ skinparam class {
 
 skinparam component {
   ArrowFontName Flama Semicondensed
-  ArrowColor #302a5d
-  ArrowFontColor #777777
+  ArrowColor ITP_DARK_BLUE
+  ArrowFontColor ITP_DARK_BLUE
   BackgroundColor #9cc3da
-  BorderColor #302a5d
+  BorderColor ITP_DARK_BLUE
   'FontColor #ffffff
   'FontName Flama Semicondensed
   'FontSize 10
