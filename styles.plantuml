@@ -11,6 +11,17 @@ skinParam defaultFontStyle plain
 ' values: otho, polyline, splines (default)
 skinparam linetype ortho
 
+skinparam arrow {
+  Color ITP_DARK_BLUE
+  FontColor ITP_DARK_BLUE
+  'FontName
+  'FontSize
+  'FontStyle
+  'LollipopColor
+  'MessageAlignment
+  'Thickness
+}
+
 skinparam class {
   BackgroundColor DEFAULT_BGCOLOR
   BorderColor ITP_DARK_BLUE

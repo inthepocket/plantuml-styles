@@ -1,0 +1,17 @@
+@startuml
+
+!include styles.plantuml
+
+start
+while (No approval for sending push notifications?)
+if (Already asked for sending push notifications?) then (yes)
+:Instruct user to manually enable push notifications;
+end
+else (no)
+:Ask for approval; 
+endif
+endwhile
+:Subscribe to Firebase notification topic (flightNo-date-language);
+stop
+
+@enduml

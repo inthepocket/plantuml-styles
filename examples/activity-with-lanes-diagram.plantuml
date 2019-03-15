@@ -1,0 +1,21 @@
+@startuml
+
+!include styles.plantuml
+
+|CMSImporter|
+start
+:Flight Status change detected;
+:Create notification;
+|CMSNotifications|
+while (Enumerate languages)
+:Construct Firebase notification for current language;
+:Send Notification to Firebase for topic (flightNo-date-language);
+|Firebase|
+repeat
+:Send notification to device;
+repeat while (more devices subscribed to topic?)
+|CMSNotifications|
+endwhile
+stop
+
+@enduml

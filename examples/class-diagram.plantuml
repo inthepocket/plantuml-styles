@@ -1,0 +1,82 @@
+@startuml
+
+!include styles.plantuml
+
+class Aircraft {
+  + manufacturer: String
+  + type: String
+  + tailNumber: String
+  + capacity: int
+}
+
+class Flight {
+  + date: Date
+  + flightNo: String
+  + airline: Airline
+  + gateOpen: DateTime
+  + gateClosed: DateTime
+  + departure: DateTime
+  + arrival: DateTime
+}
+
+Aircraft "1" -- "0..*" Flight
+
+class Airline {
+  + name: String
+}
+enum State {
++ PLANNED
++ DELAYED
++ CANCELLED
++ GATE_ANNOUNCED
++ GATE_CHANGED
++ BOARDING
++ GATE_CLOSED
++ DEPARTED
++ ARRIVED
+}
+
+
+class POI {
+ + name: String
+ + latitude: double
+ + longitude: double
+ + {abstract} icon: String
+}
+
+class Shop {
+  + icon: String
+}
+
+
+class Bar {
+  + icon: String
+}
+
+
+class Parking {
+  + icon: String
+  + capacity: int
+  + availability: int
+}
+
+
+POI <|-- Shop 
+POI <|-- Bar 
+POI <|-- Parking
+
+
+User -- POI: managed by <
+
+
+class User {
+  + username: String
+  + name: String
+  + email: String
+  + isAdmin(): boolean
+}
+
+Flight --> "1" State : state
+Airline "1" o-- "0..*" Flight
+
+@enduml

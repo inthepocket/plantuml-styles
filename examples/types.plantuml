@@ -1,0 +1,27 @@
+@startuml
+
+!include styles.plantuml
+
+left to right direction
+
+database "Database"
+package "Package"
+node "ParentNode" {
+component "Subcomponent"
+}
+node "Node"
+folder "Folder"
+frame "Frame"
+cloud "Cloud"
+actor "Actor"
+component "Component"
+interface "Interface"
+note right of Component : This is a **note**
+
+node "Server"
+node "Client"
+
+Server -0)- Client
+
+
+@enduml
