@@ -9,6 +9,7 @@ participant "Authorization Server" as AUTH
 participant "Resource Server" as API
 
 == OAuth 2.0 Authorization Code Grant ==
+ref over USER, CLIENT: Some reference
 USER -> CLIENT: Authenticate
 activate CLIENT
 CLIENT --> USER: Redirect to \n/authorize?response_type=code&client_id=<&x>&redirect_uri=<&x>&scope=<&x>
@@ -26,8 +27,14 @@ activate AUTH
 AUTH -> AUTH: Validate authorization_code,\n redirect_uri and client_id
 AUTH --> CLIENT: access_token=<&x>\ntoken_type=\nexpires_in=3600\nrefresh_token=<&x>
 deactivate AUTH
+alt Authorization code OK
 CLIENT --> USER: 200 OK
+else Authorization code expired
+CLIENT --> USER: 401 Not Authorized
+end
 deactivate CLIENT
+
+... Some delay ...
 
 == OAuth 2.0 Resource Request ==
 

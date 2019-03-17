@@ -1,58 +1,203 @@
 @startuml
 
-!define DEFAULT_BGCOLOR #9cc3da
-!define ITP_DARK_BLUE #322960
+!define COLOR_DEFAULT_BACKGROUND #92C4DD
+!define COLOR_DEFAULT_TEXT Black
+!define COLOR_ITP_DARK_BLUE #211551
+!define COLOR_ITP_YELLOW #FFCD00
+!define COLOR_BLACK #000000
+!define COLOR_WHITE #ffffff
+!define FONT_PLEX IBM Plex Mono
+!define FONT_FIRA Fira Code
+!define FONT_FLAMA Flama Semicondensed
 
-skinparam defaultFontColor Black
-skinparam defaultFontName SansSerif
+skinparam defaultFontColor COLOR_DEFAULT_TEXT
+skinparam defaultFontName FONT_PLEX
 skinparam defaultFontSize 12
 skinParam defaultFontStyle plain
 
-' values: otho, polyline, splines (default)
+'Controls how lines are drawn in PlantUML
+'values: otho, polyline, splines (default)
 skinparam linetype ortho
 
+'Distance between elements (vertically, default: 30)
+'skinparam nodesep 30
+
+'Controls the padding surrounding text
+'skinparam padding 10
+
+'Distance between elements (horizontally, default: 30)
+'skinparam ranksep 30
+
+'Line below ensures all classes have the same width in UML class diagram
+'skinparam SameClassWidth true
+
+'Uncomment line below to disable shadows
+'skinparam Shadowing false
+
+skinparam activity {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+  DiamondBackgroundColor COLOR_DEFAULT_BACKGROUND
+  DiamondBorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam actor {
+  BackgroundColor COLOR_WHITE
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam agent {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
 skinparam arrow {
-  Color ITP_DARK_BLUE
-  FontColor ITP_DARK_BLUE
-  'FontName
-  'FontSize
-  'FontStyle
-  'LollipopColor
-  'MessageAlignment
-  'Thickness
+  Color COLOR_ITP_DARK_BLUE
+  FontColor COLOR_DEFAULT_TEXT
+}
+
+skinparam artifact {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam boundary {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam card {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
 }
 
 skinparam class {
-  BackgroundColor DEFAULT_BGCOLOR
-  BorderColor ITP_DARK_BLUE
-  'FontColor #ffffff
-  'FontName Flama Semicondensed
-  'FontSize 16
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
   FontStyle bold
+  HeaderBackgroundColor COLOR_DEFAULT_BACKGROUND
+}
+
+skinparam cloud {
+  BackgroundColor COLOR_WHITE
+  BorderColor COLOR_ITP_DARK_BLUE
 }
 
 skinparam component {
-  ArrowFontName Flama Semicondensed
-  ArrowColor ITP_DARK_BLUE
-  ArrowFontColor ITP_DARK_BLUE
-  BackgroundColor DEFAULT_BGCOLOR
-  BorderColor ITP_DARK_BLUE
-  'FontColor #ffffff
-  'FontName Flama Semicondensed
-  'FontSize 10
-  ' style: plain, bold, italic
-  'FontStyle bold
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
   Style uml2  
 }
 
+skinparam control {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
 skinparam database {
-  BackgroundColor DEFAULT_BGCOLOR
-  
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam entity {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam file {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam folder {
+  BackgroundColor COLOR_WHITE
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam frame {
+  BackgroundColor COLOR_WHITE
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam interface {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam object {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+  FontStyle bold
 }
 
 skinparam node {
-  BackgroundColor DEFAULT_BGCOLOR
+  BackgroundColor COLOR_WHITE
+  BorderColor COLOR_ITP_DARK_BLUE
 }
 
+skinparam note {
+  BackgroundColor COLOR_ITP_YELLOW
+  BorderColor COLOR_BLACK
+  FontName FONT_FLAMA
+}
+
+skinparam package {
+  BackgroundColor COLOR_WHITE
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam participant {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam queue {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam rectangle {
+  BackgroundColor COLOR_WHITE
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam sequence {
+  DividerBackgroundColor COLOR_WHITE
+  DividerBorderColor COLOR_ITP_DARK_BLUE
+  DividerFontStyle bold
+  GroupBackgroundColor COLOR_DEFAULT_BACKGROUND
+  GroupBodyBackgroundColor COLOR_WHITE
+  GroupFontStyle bold
+  GroupHeaderFontStyle bold
+  LifeLineBackgroundColor COLOR_WHITE
+  LifeLineBorderColor COLOR_ITP_DARK_BLUE
+  ReferenceBackgroundColor COLOR_WHITE
+  ReferenceHeaderBackgroundColor COLOR_DEFAULT_BACKGROUND
+}
+
+skinparam stack {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam state {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam storage {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam title {
+  FontName FONT_FLAMA
+  FontSize 16
+}
+
+skinparam usecase {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
 
 @enduml

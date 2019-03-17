@@ -16,12 +16,49 @@ cloud "Cloud"
 actor "Actor"
 component "Component"
 interface "Interface"
-note right of Component : This is a **note**
+note right of Component : This is a **note**\nspanning\nmore than 2 lines.
+
+queue "Queue"
 
 node "Server"
 node "Client"
 
 Server -0)- Client
 
+entity "Entity"
+
+storage "Storage"
+
+control "Control"
+
+file "File"
+
+stack "Stack"
+
+artifact "Artifact"
+
+card "Card"
+
+boundary "Boundary"
+
+agent "Agent"
+
+folder FolderWithText [
+This is a <b>folder
+----
+You can use separator
+====
+of different kind
+....
+and style
+]
+
+node Docker [
+Containers
+----
+Docker
+----
+Debian Linux
+]
 
 @enduml

@@ -1,0 +1,30 @@
+@startuml
+
+!include styles.plantuml
+
+title Example Use Case Diagram
+
+hide footbox
+left to right direction
+
+actor "CMS User" as U
+actor "Shop Owner" as SO
+actor "Administrator" as ADM
+
+U<|--SO
+U<|--ADM
+
+
+rectangle CMS {
+U-->(Authenticate)
+(Manage Own Shop)--SO
+
+ADM--(Manage Users)
+
+ADM--(Manage POIs)
+(Manage POIs)<|--(Manage Own Shop)
+}
+
+caption UML Use Case Diagram
+
+@enduml

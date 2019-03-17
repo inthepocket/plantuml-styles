@@ -2,18 +2,16 @@
 
 !include styles.plantuml
 
-skinparam SameClassWidth true
+title Example Object Diagram
 
-title Example Class Diagram
-
-class Aircraft {
+object Aircraft {
   + manufacturer: String
   + type: String
   + tailNumber: String
   + capacity: int
 }
 
-class Flight {
+object Flight {
   + date: Date
   + flightNo: String
   + airline: Airline
@@ -25,40 +23,29 @@ class Flight {
 
 Aircraft "1" -- "0..*" Flight
 
-class Airline {
+object Airline {
   + name: String
 }
-enum State {
-+ PLANNED
-+ DELAYED
-+ CANCELLED
-+ GATE_ANNOUNCED
-+ GATE_CHANGED
-+ BOARDING
-+ GATE_CLOSED
-+ DEPARTED
-+ ARRIVED
-}
 
 
-class POI {
+object POI {
  + name: String
  + latitude: double
  + longitude: double
  + {abstract} icon: String
 }
 
-class Shop {
+object Shop {
   + icon: String
 }
 
 
-class Bar {
+object Bar {
   + icon: String
 }
 
 
-class Parking {
+object Parking {
   + icon: String
   + capacity: int
   + availability: int
@@ -73,14 +60,13 @@ POI <|-- Parking
 User -- POI: managed by <
 
 
-class User {
+object User {
   + username: String
   + name: String
   + email: String
   + isAdmin(): boolean
 }
 
-Flight --> "1" State : state
 Airline "1" o-- "0..*" Flight
 
 legend right
@@ -88,6 +74,6 @@ legend right
   legend
 endlegend
 
-caption UML Class Diagram
+caption Object Diagram
 
 @enduml
