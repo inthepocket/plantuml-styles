@@ -2,7 +2,7 @@
 
 !include styles.plantuml
 
-title Example Use Case Diagram
+'title Example Use Case Diagram
 
 hide footbox
 left to right direction
@@ -16,7 +16,7 @@ U<|--ADM
 
 
 rectangle CMS {
-U-->(Authenticate)
+U--(Authenticate)
 (Manage Own Shop)--SO
 
 ADM--(Manage Users)

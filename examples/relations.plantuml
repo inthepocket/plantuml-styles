@@ -1,0 +1,70 @@
+@startuml
+
+!include styles.plantuml
+
+skinparam SameClassWidth true
+skinparam nodesep 100
+
+class UserInterface
+class BlogEntry
+
+UserInterface .right.> BlogEntry
+note right of BlogEntry
+**Dependency**
+Objects of one class work briefly together 
+with objects from another class
+end note
+
+NewsAccount -up[hidden]- UserInterface
+
+class NewsAccount
+class NewsEntry
+'NewsAccount "1" -right- "0..*" NewsEntry: has >
+NewsAccount "1" -right-> "0..*" NewsEntry
+
+note right of NewsEntry
+**Association**
+Objects of one class work with object from another class
+for some prolonged amount of time
+end note
+
+Author -up[hidden]- NewsAccount
+
+class Author
+class Article
+'Author "1" o-right- "0..*" Article
+Author "1" o-right-> "0..*" Article
+
+note right of Article
+**Aggregation**
+One class owns but shares a reference 
+to objects of another class
+end note
+
+BlogPost -up[hidden]- Author
+
+class BlogPost
+class BlogPostBody
+'BlogPost *-right-  BlogPostBody
+BlogPost *-right->  BlogPostBody
+
+note right of BlogPostBody
+**Cmposition**
+One class contains objects from another class
+end note
+
+MediaItem -up[hidden]- BlogPost
+
+class MediaItem
+class VideoItem
+class PhotoItem
+MediaItem <|-right- VideoItem
+MediaItem <|-down- PhotoItem
+
+note right of VideoItem
+**Inheritance**
+One class is a type of another class
+end note
+
+
+@enduml

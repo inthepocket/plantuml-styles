@@ -1,0 +1,36 @@
+@startuml
+
+!include styles.plantuml
+skinparam ranksep 100
+skinparam nodesep 100
+'skinparam ArrowThickness 3
+
+node "API Loadbalancer" <<L7>> as LB
+
+rectangle "europe-west1-b" as WB {
+    node "node-group-b" <<kubernetes-nodes>> {
+        component "API" AS API_b
+        database "SQL Master" AS SQL_b
+    }
+
+}
+
+rectangle "europe-west1-d" as WD {
+    node "node-group-d" <<kubernetes-nodes>> {
+        component "API" AS API_d
+        database "SQL Failover" AS SQL_d
+    }
+}
+
+WB -[hidden]- WD
+
+LB -(0-- API_b
+LB -(0-- API_d
+
+API_b -down- SQL_b
+API_d -[hidden]- SQL_d
+API_d --- SQL_b
+
+SQL_b -- SQL_d
+
+@enduml

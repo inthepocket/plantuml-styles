@@ -1,0 +1,35 @@
+@startuml
+
+!include styles.plantuml
+
+component "iOS SDK" as IOS
+component "Android SDK" as ANDR
+
+component "API" as API
+component "Analytics API" as RESTAPI
+
+IOS -(0- API
+ANDR -(0- API
+
+component "Worker" as WORKER
+component "Log Processing" as PROC
+
+database "MongoDB" as DB
+component "CMS" as CMS 
+queue "Rabbit MQ" as QUEUE
+
+API -down(0- DB
+
+API -right(0- QUEUE
+
+WORKER -(0- QUEUE
+
+PROC -(0- QUEUE
+
+CMS -(0- DB
+PROC -(0- DB
+WORKER -left(0- DB
+
+RESTAPI --(0- DB
+
+@enduml

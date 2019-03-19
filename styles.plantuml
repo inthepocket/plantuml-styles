@@ -10,6 +10,8 @@
 !define FONT_FIRA Fira Code
 !define FONT_FLAMA Flama Semicondensed
 
+skinparam backgroundcolor transparent
+
 skinparam defaultFontColor COLOR_DEFAULT_TEXT
 skinparam defaultFontName FONT_PLEX
 skinparam defaultFontSize 12

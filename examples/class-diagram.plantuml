@@ -4,7 +4,7 @@
 
 skinparam SameClassWidth true
 
-title Example Class Diagram
+'title Example Class Diagram
 
 class Aircraft {
   + manufacturer: String
@@ -83,11 +83,11 @@ class User {
 Flight --> "1" State : state
 Airline "1" o-- "0..*" Flight
 
-legend right
-  Short
-  legend
-endlegend
+'legend right
+'  Short
+'  legend
+'endlegend
 
-caption UML Class Diagram
+'caption UML Class Diagram
 
 @enduml
