@@ -7,15 +7,18 @@
 !define COLOR_BLACK #000000
 !define COLOR_WHITE #ffffff
 !define FONT_PLEX IBM Plex Mono
-!define FONT_FIRA Fira Code
+!define FONT_FIRA_MONO Fira Mono
+!define FONT_FIRA_CODE Fira Code
 !define FONT_FLAMA Flama Semicondensed
 
 skinparam backgroundcolor transparent
 
 skinparam defaultFontColor COLOR_DEFAULT_TEXT
-skinparam defaultFontName FONT_PLEX
-skinparam defaultFontSize 12
+skinparam defaultFontName FONT_FIRA_MONO
+skinparam defaultFontSize 14
 skinParam defaultFontStyle plain
+
+skinparam dpi 90
 
 'Controls how lines are drawn in PlantUML
 'values: otho, polyline, splines (default)
