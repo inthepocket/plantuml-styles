@@ -1,4 +1,4 @@
-# PlantUML Language Reference (v1.2019.03)
+# PlantUML Language Reference (v1.2019.05)
 ## Type (29)
 ```
 abstract

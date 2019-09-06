@@ -66,6 +66,11 @@ skinparam artifact {
   BorderColor COLOR_ITP_DARK_BLUE
 }
 
+skinparam biddable {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
 skinparam boundary {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
   BorderColor COLOR_ITP_DARK_BLUE
@@ -88,6 +93,11 @@ skinparam cloud {
   BorderColor COLOR_ITP_DARK_BLUE
 }
 
+skinparam collections {
+  BackgroundColor COLOR_WHITE
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
 skinparam component {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
   BorderColor COLOR_ITP_DARK_BLUE
@@ -100,6 +110,16 @@ skinparam control {
 }
 
 skinparam database {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam designed {
+  BackgroundColor COLOR_DEFAULT_BACKGROUND
+  BorderColor COLOR_ITP_DARK_BLUE
+}
+
+skinparam domain {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
   BorderColor COLOR_ITP_DARK_BLUE
 }
@@ -188,6 +208,8 @@ skinparam stack {
 skinparam state {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
   BorderColor COLOR_ITP_DARK_BLUE
+  StartColor COLOR_ITP_DARK_BLUE
+  EndColor COLOR_ITP_DARK_BLUE
 }
 
 skinparam storage {
@@ -204,5 +226,7 @@ skinparam usecase {
   BackgroundColor COLOR_DEFAULT_BACKGROUND
   BorderColor COLOR_ITP_DARK_BLUE
 }
+
+
 
 @enduml

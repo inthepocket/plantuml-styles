@@ -1,0 +1,45 @@
+@startuml
+!include styles.plantuml
+
+skinparam state {
+  BorderColor<<conditional>> #FFCD00
+}
+
+
+left to right direction
+
+state "node('docker')" as buildnode {
+state "Checkout" as checkout
+state "Dependencies" as deps
+state "Unit Tests" as test
+state "Build" as build
+}
+state "node('kubectl')" as devnode <<conditional>> {
+state "Deploy to DEV" as deploydev
+}
+state "node('docker')" as intnode <<conditional>> {
+state "Integration Tests" as inttest
+}
+state "node('kubectl')" as uatnode <<conditional>> {
+state "Deploy to UAT" as deployuat
+}
+state "node('docker')" as accnode <<conditional>> {
+state "Acceotance Tests" as acctest
+}
+state "node('kubectl')" as prdnode <<conditional>> {
+state "Deploy to PRD" as deployprd
+}
+
+
+[*] --> checkout
+checkout --> deps
+deps --> test
+test --> build
+build --> deploydev
+deploydev --> inttest
+inttest --> deployuat
+deployuat --> acctest
+acctest --> deployprd
+deployprd --> [*]
+
+@enduml

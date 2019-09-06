@@ -1,0 +1,239 @@
+@startmindmap
+!include styles.plantuml
+
+* Architecture
+
+
+** Design
+*** Software Design
+****_ MVVM
+****_ VIPER
+****_ MVP
+****_ Dependency Injection
+****_ DAO / CRUD
+****_ KISS
+*** Data Design
+****_ CAP Theorem
+*** Architectural Patterns
+****_ Enterprise Service Bus
+****_ Service Oriented Architecture
+****_ Microservices
+****_ Serverless
+****_ 3-Tier (n-Tier)
+****_ Client-Server
+****_ Message Broker
+****_ Event Bus
+****_ Command Query Responsibility Segregation (CQRS)
+*** Concepts
+****_ Enterprise architecture
+****_ Evolutionary architecture
+****_ Single Responsibility Principle
+****_ Conway's law
+****_ Quality attributes
+****_ Loose Coupling
+****_ High Cohesion
+****_ Test-driven development
+*** Modelling
+****_ 4+1 view
+****_ Domain Driven Design
+****_ (E)ER
+****_ Class Diagram
+****_ Use Case Diagram
+****_ Deployment Diagram
+****_ Sequence Diagram
+****_ Component Diagram
+****_ State Diagram
+****_ Timing Diagram
+****_ OpenAPI Specification
+** Operations
+*** Requirements
+****_ Epics
+****_ User stories
+****_ Quality attributes
+****_ Fitness functions
+****_ Versioning
+*** SCM
+****_ GIT
+****_ Branching & merging strategy
+****_ Pull requests & protected branches
+*** DevOps
+****_ Continuous Delivery
+****_ Infrastructure-as-code (Terraform)
+****_ Configuration-as-code
+****_ Deployment pipelines
+*** Planning
+****_ Risk Management
+****_ Release Management
+****_ Change Management
+
+*** Quality Assurance
+****_ Unit testing
+****_ Integration testing
+****_ System testing
+****_ End-to-end testing
+****_ Acceptance testing
+*** Monitoring
+**** Usage monitoring
+*****_ Google Analytics
+*****_ Firebase Analytics
+*****_ Appbot
+**** Infrastructure
+*****_ Stackdriver
+*****_ Prometheus / Grafana
+*****_ NewRelic (APM)
+*****_ DataDog (APM)
+**** Logs & Exceptions
+*****_ Fluentd / Kibana
+*****_ Logstash / Kibana
+*****_ Sentry
+*** Incident Management
+****_ PagerDuty
+
+
+** Security
+*** Software security
+****_ OWASP Top 10
+****_ Secure coding practices
+****_ Threat modelling
+*** Certificates
+****_ X.509 PKI
+****_ Mutual TLS
+****_ SSL Pinning
+*** Encryption
+****_ AES
+****_ RSA
+*** Signing & Hashing
+****_ SHA
+****_ HMAC
+****_ JWT
+
+** Legal
+*** Intellectual Property
+****_ IP legislation
+****_ Licenses
+****_ Copyleft
+*** Privacy
+****_ GDPR
+*** Compliance
+****_ ISO 27001 (Information Security Management)
+****_ PCI/DSS (Payments)
+****_ ISO 62304/32366/14971 (Medical Device Software)
+
+left
+
+** Platforms
+*** iOS
+****_ iOS SDK
+****_ React Native
+****_ App Store
+*** Android
+****_ Android SDK
+****_ React Native
+****_ Playstore
+*** Web
+****_ HTML / CSS
+****_ ECMAScript (ES9)
+****_ Progressive Web Apps
+****_ React.js
+*** Xamarin
+****_ Xamarin.iOS
+****_ Xamarin.Android
+****_ Xamarin.Forms
+*** Google Cloud Platform
+****_ Compute Engine
+****_ Kubernetes Engine
+****_ App Engine
+****_ Cloud Storage
+****_ Cloud Functions
+*** Amazon Web Services
+****_ EC2
+****_ S3
+****_ Lambda
+****_ EKS
+*** Microsoft Azure
+
+** Technology
+*** Embedded Databases
+****_ SQLite
+****_ Realm
+*** Databases
+****_ MySQL
+****_ MongoDB
+****_ Cassandra
+****_ Redis
+****_ Elasticsearch
+****_ Firebase
+****_ InfluxDB
+*** Messaging
+****_ RabbitMQ
+****_ Apache Kafka
+****_ Redis
+****_ Pub/Sub
+*** Webservers
+****_ Apache
+****_ Nginx
+****_ Træfic
+*** API Gateways
+****_ Kong
+****_ Apigee
+****_ 3scale
+*** Containerized Apps
+****_ Docker
+****_ Kubernetes
+****_ Helm
+****_ Istio
+*** Media
+**** Images
+*****_ Bitmap formats (PNG, JPG, GIF)
+*****_ Vector formats (SVG)
+**** Video
+*****_ Container formats (MP4, MKV)
+*****_ Codecs (H.264, H.265)
+*****_ HLS
+*** Data serialization
+****_ JSON
+****_ XML
+****_ YAML
+****_ Protobuf
+****_ Base64
+
+** Infrastructure & communication
+*** Authentication Protocols (SSO)
+****_ OAuth2
+****_ OpenID Connect (OIDC)
+****_ SAML 2.0
+****_ LDAP(S)
+*** Webservices
+****_ REST
+****_ GraphQL
+****_ SOAP
+****_ gRPC
+*** Network Protocols
+****_ HTTP(S)
+****_ Websockets
+****_ TCP
+****_ UDP
+****_ IPv4 / IPv6
+****_ BLE
+*** Discovery
+****_ DNS
+****_ mDNS / Bonjour
+****_ DHCP
+*** Network Components
+****_ Firewall
+****_ Router
+****_ Switch
+****_ Proxy
+****_ Reverse proxy
+****_ L4 load balancer
+****_ L7 load balancer
+****_ Site-to-site VPN (IPSec, IKEv2)
+****_ Client-to-site VPN (L2TP, SSL)
+****_ Web Application Firewall (WAF)
+*** User Directories
+****_ Active Directory
+****_ Azure AD
+****_ Google Suite
+****_ OpenLDAP
+
+@endmindmap

@@ -1,0 +1,35 @@
+@startuml
+!include styles.plantuml
+
+left to right direction
+
+state "node('reactnative')" as reactnode {
+state "Checkout" as checkout
+state "Dependencies" as deps
+state "Lint" as lint
+state "Tests" as test
+
+state "Android Dependencies" as andrdeps
+state "Android Build" as andrbuild
+state "Android Deploy" as andrdeploy
+}
+state "node('ios')" as iosnode {
+state "iOS Dependencies" as iosdeps
+state "iOS Build" as iosbuild
+state "iOS Deploy" as iosdeploy
+}
+
+[*] --> checkout
+checkout --> deps
+deps --> lint
+lint --> test
+test --> andrdeps
+test --> iosdeps
+andrdeps --> andrbuild
+andrbuild --> andrdeploy
+andrdeploy --> [*]
+iosdeps --> iosbuild
+iosbuild --> iosdeploy
+iosdeploy --> [*]
+
+@enduml
