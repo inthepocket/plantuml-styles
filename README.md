@@ -15,5 +15,5 @@ the stylesheet in different scenarios. The recommended way to test these example
 This repository contains a modified version of the `plantuml-server`, released under the GPL3 license, that demonstrates how a stylesheet
 can be applied server-side. In this scenario, it is no longer necessary to use `!include` or `!includeurl` directives. To test it, run:
 
-    docker run -p 8080:8080 inthepocket/plantuml-styles
+    docker run -p 8080:8080 inthepocket/styled-plantuml-server
 
