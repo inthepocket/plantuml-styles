@@ -18,4 +18,4 @@ RUN curl -O -L -J https://www.fontsquirrel.com/fonts/download/fira-sans && \
 USER jetty
 ENV PLANTUML_PRE_INCLUDE_UML=/var/lib/jetty/resources/styles.plantuml
 
-COPY ../styles.plantuml /var/lib/jetty/resources
+COPY styles.plantuml /var/lib/jetty/resources
