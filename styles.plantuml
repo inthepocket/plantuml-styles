@@ -6,10 +6,10 @@
 !define COLOR_ITP_YELLOW #FFCD00
 !define COLOR_BLACK #000000
 !define COLOR_WHITE #ffffff
-!define FONT_PLEX IBM Plex Mono
+
 !define FONT_FIRA_MONO Fira Mono
 !define FONT_FIRA_CODE Fira Code
-!define FONT_FLAMA Flama Semicondensed
+!define FONT_FIRA_SANS Fira Sans
 
 skinparam backgroundcolor transparent
 
@@ -163,7 +163,7 @@ skinparam node {
 skinparam note {
   BackgroundColor COLOR_ITP_YELLOW
   BorderColor COLOR_BLACK
-  FontName FONT_FLAMA
+  FontName FONT_FIRA_SANS
 }
 
 skinparam package {
@@ -218,7 +218,7 @@ skinparam storage {
 }
 
 skinparam title {
-  FontName FONT_FLAMA
+  FontName FONT_FIRA_SANS
   FontSize 16
 }
 
